@@ -31,8 +31,6 @@ export default {
 .wrapper-main {
     width: 100%;
     background-color: $maincolor;
-    // border: 1px solid rgb(8, 181, 109);
-    // height: calc(100vh - $headerheight);
 
     section {
         padding: 40px 0 0 0;
@@ -41,9 +39,5 @@ export default {
             width: 180px;
         }
     }
-
-    .wrapper-card {
-        // border: 1px solid rgb(107, 38, 52);
-
-    }
-}</style>
+}
+</style>

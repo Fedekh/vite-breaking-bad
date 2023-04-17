@@ -16,7 +16,6 @@ export default{
 
 .header-container{
     height: $headerheight;
-    border: 1px solid red;
     .logo {
         width: 200px;
     }

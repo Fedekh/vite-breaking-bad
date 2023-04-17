@@ -15,30 +15,21 @@ export default {
     }
   },
   mounted() {
-    this.store.loading = true;
+    store.loading = true;
     axios.get(store.apiURL).then((resp) => {
       console.log(resp);
-        this.store.characters = resp.data.data;
-        this.store.loading = false;
-      })
+      this.store.characters = resp.data.data;
+      this.store.loading = false;
+    })
   }
 }
 </script>
-
-
-<!-- --------------------------------------------------------- -->
-
 
 <template>
   <AppHeader />
   <AppMain />
 </template>
 
-
-<!-- --------------------------------------------------------- -->
-
-
 <style lang="scss">
 @use "./styles/general.scss";
-
 </style>
