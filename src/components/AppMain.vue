@@ -30,12 +30,11 @@ export default {
 
 .wrapper-main {
     width: 100%;
-    border: 1px solid rgb(0, 255, 149);
-    height: calc(100vh - $headerheight);
     background-color: $maincolor;
+    // border: 1px solid rgb(8, 181, 109);
+    // height: calc(100vh - $headerheight);
 
     section {
-        border: 1px solid rgb(0, 255, 149);
         padding: 40px 0 0 0;
 
         select {
@@ -44,7 +43,7 @@ export default {
     }
 
     .wrapper-card {
-        border: 1px solid rgb(0, 255, 149);
+        // border: 1px solid rgb(107, 38, 52);
 
     }
 }</style>

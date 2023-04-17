@@ -8,20 +8,21 @@ export default {
 </script>
 
 <template>
-    <div class="text-center">
-        <img class="rounded-circle" :src="character.image" alt="">
-        <h3 class="mb-3">{{ character.name }}</h3>
-        <p>{{ character.status }}</p>
-        <p>{{ character.species }}</p>
+    <div class="text-center d-flex flex-column justify-content-between">
+        <img :src="character.card_images[0].image_url" alt="">
+        <h5 class="text-white">{{ character.name }}</h5>
+        <p >{{ character.type }}</p>
+        <p class="text-black">{{ character.archetype }}</p>
     </div>
 </template>
 
 <style scoped lang="scss">
 @use "../styles/partials/variables" as *;
 
-.container-list {
-    border: 1px solid red;
-}
-
+.text-center{
+        background-color: $maincolor;
+        height: 430px;
+        
+    }
 
 </style>

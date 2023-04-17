@@ -16,11 +16,10 @@ export default {
   },
   mounted() {
     this.store.loading = true;
-    axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
-      .then((resp) => {
-        const myData = resp.data.data;
+    axios.get(store.apiURL).then((resp) => {
+      console.log(resp);
+        this.store.characters = resp.data.data;
         this.store.loading = false;
-
       })
   }
 }
