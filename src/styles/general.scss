@@ -1,0 +1,11 @@
+@use "./partials/variables" as *;
+@import "bootstrap/scss/bootstrap";
+
+img {
+    max-width: 100%;
+}
+
+body{
+    background-color: rgb(88, 83, 83);
+    color: white;
+}
