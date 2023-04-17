@@ -3,7 +3,7 @@ import AppCard from "./AppCard.vue"
 
 export default {
     name: "AppMain",
-    components:{
+    components: {
         AppCard
     }
 }
@@ -17,9 +17,8 @@ export default {
                     <option value="">prova1</option>
                     <option value="">prova2</option>
                     <option value="">prova3</option>
-                    <option value="">prova4</option>
-                    <option value="">prova5</option>
                 </select>
+                <AppCard />
             </section>
         </div>
     </div>
@@ -37,12 +36,15 @@ export default {
 
     section {
         border: 1px solid rgb(0, 255, 149);
-        padding: 40px 0;
+        padding: 40px 0 0 0;
 
         select {
             width: 180px;
-
         }
     }
-}
-</style>
+
+    .wrapper-card {
+        border: 1px solid rgb(0, 255, 149);
+
+    }
+}</style>
