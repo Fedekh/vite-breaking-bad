@@ -1,11 +1,19 @@
 <script>
 import AppCard from "./AppCard.vue"
+import SearchBar from "./SearchBar.vue"
+
 
 
 export default {
     name: "AppMain",
     components: {
-        AppCard,
+        SearchBar,
+        AppCard
+    },
+    methods:{
+        gestioneScelta(){
+            console.log("filter");
+        }
     }
 }
 </script>
@@ -14,12 +22,7 @@ export default {
     <div class="wrapper-main">
         <div class="wrapper-container ">
             <section class="container">
-                <select class="mb-4"  name="" id="">
-                    <option value="">prova1</option>
-                    <option value="">prova2</option>
-                    <option value="">prova3</option>
-                </select>
-
+                <SearchBar @filter="gestioneScelta" />
                 <AppCard />
             </section>
         </div>
