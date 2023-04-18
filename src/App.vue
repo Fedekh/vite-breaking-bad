@@ -15,24 +15,22 @@ export default {
     }
   },
   mounted() {
-    this.store.loading = true;
-    axios.get(store.apiURL).then((resp) => {
-      console.log(resp);
-      this.store.characters = resp.data.data;
-      this.store.loading = false;
-    })
+    this.cardSelected();
+  },
+
+  methods: {
+    cardSelected() {
+      this.store.loading = true;
+      const params = {
+        ... this.store.statoSelezionato && { archetype: this.store.statoSelezionato }
+      }
+      axios.get(this.store.apiURL, {
+        params
+      }).then(resp => { this.store.cards = resp.data.data; })
+        .catch(error => { console.log(error); this.store.error = "Oops, quacosa è andato storto.." })
+        .finally(() => { this.store.loading = false; });
+    }
   }
-  // this.store.loading = true;
-  //   this.store.error = "";
-  //  axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php", 
-  //{ params:
-  // { 
-  //    num: 10,
-  //   offset: 0
-  // }
-  // }).then(resp => {   this.store.cards = resp.data.data;  })
-  //.catch(error => {console.log(error); this.store.error = "Oops, quacosa è andato storto..";})
-  //.finally(() => {      this.store.loading = false;    });
 }
 </script>
 

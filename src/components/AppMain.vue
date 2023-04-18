@@ -2,8 +2,6 @@
 import AppCard from "./AppCard.vue"
 import SearchBar from "./SearchBar.vue"
 
-
-
 export default {
     name: "AppMain",
     components: {
@@ -12,7 +10,7 @@ export default {
     },
     methods:{
         gestioneScelta(){
-            console.log("filter");
+            this.cardSelected();
         }
     }
 }

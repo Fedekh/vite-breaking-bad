@@ -12,7 +12,6 @@ export default {
     data() {
         return {
             store
-            
         }
     }
 }
@@ -21,7 +20,7 @@ export default {
 <template>
     <div class="wrapper-list p-4">
         <div class="container p-4">
-            <Loader v-if="store.loading"/>
+            <Loader v-if="store.loading" />
             <div v-else class="container">
                 <p class="title text-white text-xs-center text-lg-start m-auto">TROVATE 39 CARDS</p>
                 <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-3">
@@ -49,11 +48,11 @@ export default {
         line-height: 40px;
         background-color: black;
 
-            @media screen and (max-width: 576px) {
-                max-width: 50%;
-            }
+        @media screen and (max-width: 576px) {
+            max-width: 50%;
+        }
 
-        
+
     }
 
 }
