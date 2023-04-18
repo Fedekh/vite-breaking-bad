@@ -6,21 +6,23 @@ import { store } from '../store';
 export default {
     name: "AppCard",
     components: {
-        ListCards
+        ListCards,
+        Loader
     },
     data() {
         return {
             store
+            
         }
     }
 }
 </script>
 
 <template>
-    <Loader v-if="store.loading" />
-    <div v-else class="wrapper-list p-4">
+    <div class="wrapper-list p-4">
         <div class="container p-4">
-            <div class="container">
+            <Loader v-if="store.loading"/>
+            <div v-else class="container">
                 <p class="title text-white text-xs-center text-lg-start m-auto">TROVATE 39 CARDS</p>
                 <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-3">
                     <div v-for="card in store.characters " :key="card.id">
@@ -29,7 +31,6 @@ export default {
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 

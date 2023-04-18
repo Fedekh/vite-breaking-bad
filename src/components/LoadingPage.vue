@@ -5,50 +5,48 @@ export default {
 </script>
 
 <template>
-  <h1 class="wrapper">CIAOOOOOOOOOOOOOOOOOOOO</h1>
+  <div class="container">
+    <div class="loader-wrapper d-flex justify-content-center align-items-start">
+      <h2 class="calm">CALMA</h2>
+      <div class="loader"></div>
+    </div>
+
+  </div>
 </template>
 
 <style scoped lang="scss">
 @use "../styles/partials/variables" as *;
 
-.cell {
-  width: 25%;
-
-  .wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 10rem;
-    margin: 1rem 1rem 0;
-    padding-top: 2.2rem;
-    background: rgba(255, 255, 255, .2);
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 0.2rem;
-      text-align: center;
-      background: rgba(255, 255, 255, .25);
-      /* Increment the section counter */
-      counter-increment: spinnerCount;
-      /* Display the counter on pseudo-elements */
-    }
-  }
+.container {
+  position: relative;
+}
+.calm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(194, 36, 205);
+  
 }
 
+.loader {
+  border: 8px solid rgba(0, 0, 0, 0.2);
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  animation: spin 1.8s linear infinite;
+}
 
-// SPINNERS STYLES
-.spinner {
-  // Common styles
-  width: 4rem;
-  height: 4rem;
-
-  // Individual styles
-  &.spinner1 {
-    border: 3px solid rgba(255, 255, 255, .25);
-    border-top-color: rgba(0, 0, 0, .5);
-    border-radius: 50%;
-    animation: rotation .8s ease infinite;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-}</style>
+
+  to {
+    transform: rotate(360deg);
+  }
+
+
+}
+</style>

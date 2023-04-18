@@ -7,7 +7,7 @@ import { store } from "./store";
 export default {
   components: {
     AppHeader,
-    AppMain
+    AppMain,
   },
   data() {
     return {
@@ -15,7 +15,7 @@ export default {
     }
   },
   mounted() {
-    store.loading = true;
+    this.store.loading = true;
     axios.get(store.apiURL).then((resp) => {
       console.log(resp);
       this.store.characters = resp.data.data;
@@ -27,7 +27,7 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
+  <AppMain/>
 </template>
 
 <style lang="scss">
