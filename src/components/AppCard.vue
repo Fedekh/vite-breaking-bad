@@ -23,7 +23,7 @@ export default {
         <div class="container p-4">
             <Loader v-if="store.loading"/>
             <div v-else class="container">
-                <p class="title text-xs-center text-lg-center m-auto">TROVATE {{this.store.characters.length}} CARDS</p>
+                <p class="title text-xs-center text-lg-center m-auto">TROVATE {{store.characters.length}} CARDS</p>
                 <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-3">
                     <div v-for="card in store.characters " :key="card.id">
                         <ListCards class="col" :character="card" />

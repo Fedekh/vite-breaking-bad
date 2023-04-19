@@ -21,12 +21,12 @@ export default {
 </script>
 
 <template>
-    <div class="wrapper-main">
+    <div class="wrapper-main" :style="`background-color: ${store.sceltaSfondo}`">
         <div class="wrapper-container ">
             <section class="container">
                 <SearchBar @chiamataAlPadre="$emit('filter')" />
-                <AppCard v-if="(this.store.controlloErrori=='')"  />
-                <h1 v-else class="text-center">{{ this.store.error }}</h1>
+                <AppCard v-if="(store.controlloErrori=='')"  />
+                <h1 v-else class="text-center">{{ store.error }}</h1>
             </section>
         </div>
     </div>
@@ -38,7 +38,6 @@ export default {
 
 .wrapper-main {
     width: 100%;
-    background-color: $maincolor;
 
     section {
         padding: 40px 0 0 0;

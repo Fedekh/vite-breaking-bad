@@ -9,8 +9,6 @@ export default {
             options: ["Alien", "Ally of Justice", "Ancient Gear"],
             store,
             numberCard: "",
-            numberOffset: "",
-            sceltaColor:""
         }
     },
 
@@ -23,13 +21,15 @@ export default {
             <label  for="findcard" id="findcardlabel">Inserisci il numero di Card che vuoi importare e l'archetipo</label>
             <input class="rounded-pill border px-3" id="findcard" v-model="store.num" type="number">
             <label  for="setOffset" id="offSetLabel">Inserisci il numero offset</label>
-            <input class="rounded-pill border px-3" id="setOffset" v-model="numberOffset" @input="store.offset = numberOffset" type="number">
+            <input class="rounded-pill border px-3" id="setOffset" v-model="store.offset" type="number">
         </div>
         <select v-model="store.statoSelezionato" class="mb-4 text-start rounded-pill border" name="status" id="status">
             <option value="">TUTTE</option>
             <option v-for="option in options" :value="option">{{ option }}</option>
         </select>
         <button  @click="$emit('chiamataAlPadre')" class="btn btn-success">Search</button>
+        <label for="sfondo">Scegli un colore di sfondo</label>
+        <input type="color" name="sfondo" id="sfondo" v-model="store.sceltaSfondo">
         
     </div>
 </template>

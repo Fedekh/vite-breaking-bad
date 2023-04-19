@@ -8,7 +8,7 @@ export const store = reactive({
     loading:null,           //variabile che indica se la chiamata API è in corso
     num:"",
     offset:0,
-     controlloErrori:"",
-     sceltaColore
+    controlloErrori:"",
+    sceltaSfondo:"blue"
 })
 
